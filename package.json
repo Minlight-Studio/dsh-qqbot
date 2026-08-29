@@ -1,0 +1,19 @@
+{
+  "name": "qq-bot-plugin",
+  "version": "0.1.0",
+  "description": "Bridge QQ (NapCat / OneBot v11) to DeepSeek Harness: QQ messages become DSH agent prompts, agent replies (autonomous, with poke & sticker) go back to QQ.",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "start": "node src/bridge.js",
+    "chk": "node --check src/bridge.js && node --check src/child-bridge.js && node --check src/mcp-qq.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "zod": "^4.4.3"
+  }
+}

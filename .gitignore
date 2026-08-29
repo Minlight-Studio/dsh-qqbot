@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Runtime config / state (never commit)
+config.json
+state/
+
+# Logs
+*.log
+*.log.*
+
+# OS
+.DS_Store
+Thumbs.db
