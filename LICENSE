@@ -2,7 +2,7 @@ Copyright (c) Minlight Studio
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software", referring
-to Minecraft plugin, module, source code and configuration files), to deal
+to source code, modules, configuration files and documentation), to deal
 in the Software without restriction, including without limitation the rights
 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
@@ -10,15 +10,15 @@ furnished to do so, subject to the following conditions:
 
 1. The above copyright notice containing "Minlight Studio" and this full license
 text must be preserved within all copies and substantial portions of the Software,
-whether distributed as source code, compiled plugin jar archive, configuration files.
+whether distributed as source code, compiled binaries, or configuration files.
 
-2. Any modified derivative plugin, redistributed jar, publicly deployed server
+2. Any modified derivative work, redistributed build, or publicly deployed
 installation shall NOT remove, hide, alter or replace the original attribution
 "Minlight Studio". You may add your own modification statement and contributor
 information, but you cannot erase the original creator identification.
 
-3. If you publish modified versions of this plugin publicly (forums, resource sites,
-plugin marketplaces, GitHub, Discord), you must clearly state that your work
+3. If you publish modified versions of this software publicly (forums, resource sites,
+package registries, GitHub, Discord), you must clearly state that your work
 is a derivative modification based on the original project developed by Minlight Studio.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
