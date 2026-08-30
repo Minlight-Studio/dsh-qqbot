@@ -171,14 +171,22 @@ ss -tlnp | grep -E ":3000|:3001"
 
 ## 六、部署插件
 
-把本仓库 clone（或直接拷贝）到服务器，例如 `/root/qq-bot-plugin`：
+把**本仓库** clone（或直接拷贝整个目录）到服务器，默认路径 `/root/dsh-qqbot`（clone 后文件夹名就是仓库名 `dsh-qqbot`）。
+
+> 如果你 **fork 了本仓库**，请把下面的 `git clone` 地址换成**你自己的仓库地址**（`https://github.com/<你的用户名>/dsh-qqbot.git`），clone 出来的文件夹仍叫 `dsh-qqbot`，后续步骤不变。
 
 ```bash
 cd /root
-git clone <你的仓库地址> dsh-qqbot   # 或直接把整个目录拷过来
-cd qq-bot-plugin
+# 方式 A：clone 本仓库（默认生成 dsh-qqbot/ 文件夹）
+git clone https://github.com/Minlight-Studio/dsh-qqbot.git
+# 方式 B（fork 后）：clone 你自己的仓库
+# git clone https://github.com/<你的用户名>/dsh-qqbot.git
+
+cd dsh-qqbot
 npm install    # 安装 @modelcontextprotocol/sdk + zod
 ```
+
+> 💡 也可以**不用 git**，直接把整个插件目录拷到服务器，比如放到 `/root/dsh-qqbot`。
 
 创建配置：
 
@@ -258,7 +266,7 @@ sudo systemctl enable --now dsh-proxy.service
 ## 九、运行桥接并测试
 
 ```bash
-cd /root/qq-bot-plugin
+cd /root/dsh-qqbot
 node src/bridge.js
 ```
 
@@ -288,9 +296,9 @@ After=network.target dsh.service napcat.service
 
 [Service]
 Type=simple
-WorkingDirectory=/root/qq-bot-plugin
+WorkingDirectory=/root/dsh-qqbot
 Environment=PATH=/usr/local/lib/nodejs/node-v24.15.0-linux-x64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-ExecStart=/usr/local/lib/nodejs/node-v24.15.0-linux-x64/bin/node /root/qq-bot-plugin/src/bridge.js
+ExecStart=/usr/local/lib/nodejs/node-v24.15.0-linux-x64/bin/node /root/dsh-qqbot/src/bridge.js
 Restart=on-failure
 RestartSec=5
 
