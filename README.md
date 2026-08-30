@@ -175,7 +175,7 @@ ss -tlnp | grep -E ":3000|:3001"
 
 ```bash
 cd /root
-git clone <你的仓库地址> qq-bot-plugin   # 或直接把整个目录拷过来
+git clone <你的仓库地址> dsh-qqbot   # 或直接把整个目录拷过来
 cd qq-bot-plugin
 npm install    # 安装 @modelcontextprotocol/sdk + zod
 ```
